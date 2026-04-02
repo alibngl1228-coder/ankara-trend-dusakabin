@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankara Trend Duşakabin & Banyo</title>
+<style>
+body{font-family:Arial;margin:0;background:#0f172a;color:white}
+header{background:#020617;padding:20px;text-align:center}
+nav a{color:white;margin:0 10px;text-decoration:none}
+.hero{padding:80px 20px;text-align:center;background:linear-gradient(120deg,#0ea5e9,#1e293b)}
+section{padding:60px 20px;max-width:1100px;margin:auto}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#1e293b;padding:20px;border-radius:12px}
+.card img{width:100%;border-radius:10px;margin-bottom:10px}
+footer{background:#020617;text-align:center;padding:20px;margin-top:40px}
+button{background:#0ea5e9;border:none;padding:12px 20px;border-radius:8px;color:white;cursor:pointer}
+
+.slider{position:relative;max-width:900px;margin:auto;display:flex;align-items:center;justify-content:center}
+.slides{overflow:hidden;width:100%}
+.slide{width:100%;display:none;border-radius:12px}
+.prev,.next{background:#0ea5e9;border:none;color:white;font-size:24px;padding:10px 16px;border-radius:8px;cursor:pointer;margin:10px}
+
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.review{background:#1e293b;padding:20px;border-radius:12px}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
+.instagramBtn{position:fixed;bottom:140px;right:20px;background:#E1306C;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
+.call{position:fixed;bottom:80px;right:20px;background:#0ea5e9;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
+
+.ratingBox{margin-bottom:20px;font-size:20px}
+</style>
+</head>
+<body>
+<header>
+<h1>Ankara Trend Duşakabin & Banyo</h1>
+<nav>
+<a href="#">Ana Sayfa</a>
+<a href="#hizmet">Hizmetler</a>
+<a href="#galeri">Galeri</a>
+<a href="#yorum">Yorumlar</a>
+<a href="#iletisim">İletişim</a>
+<a href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank">Instagram</a>
+</nav>
+</header>
+
+<div class="hero">
+<h2>Profesyonel Duşakabin ve Su Tesisatı Hizmetleri</h2>
+<p>Modern çözümler • Kaliteli malzeme • Uygun fiyat</p>
+<a href="tel:+905419668704"><button>Hemen Ara</button></a>
+</div>
+
+<section id="hizmet">
+<h2>Hizmetlerimiz</h2>
+<div class="services">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101" alt="Duşakabin montajı">
+<h3>Duşakabin Montajı</h3>
+<p>Her banyoya uygun modern duşakabin çözümleri.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1" alt="Banyo tesisatı">
+<h3>Su Tesisatı</h3>
+<p>Banyo, lavabo ve su hattı için profesyonel tesisat hizmeti.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600566752227-8f2c7a4fbd44" alt="Banyo tamiri">
+<h3>Arıza Tamiri</h3>
+<p>Su kaçağı, klozet, lavabo ve duş alanı arızalarına hızlı müdahale.</p>
+</div>
+</div>
+</section>
+
+<section id="galeri">
+<h2>Banyo & Duşakabin Galerisi</h2>
+<div class="slider">
+<button class="prev" id="prevBtn">❮</button>
+<div class="slides">
+<img class="slide" src="banyodolap.jpeg" alt="Lüks banyo dolabı ve lavabo modeli">
+<img class="slide" src="duşakabin1.jpeg" alt="Modern cam duşakabin ve banyo modeli">
+<img class="slide" src="duşakabin2.jpeg" alt="Siyah oval duşakabin modeli">
+<img class="slide" src="duşakabin3.jpeg" alt="Siyah çerçeveli duşakabin ve tuvalet alanı">
+<img class="slide" src="duşakabin4.jpeg" alt="Sürgülü siyah duşakabin modeli">
+<img class="slide" src="duşakabin5.jpeg" alt="Köşe siyah duşakabin modeli">
+</div>
+<button class="next" id="nextBtn">❯</button>
+</div>
+</section>
+
+<section id="yorum">
+<h2>Müşteri Yorumları</h2>
+<div class="ratingBox">Ortalama Puan: <span id="avgRating">4.6</span> / 5 ⭐</div>
+
+<div class="reviews" id="reviewsList"></div>
+
+<h3 style="margin-top:40px">Yorum Bırak</h3>
+<form id="reviewForm" style="display:grid;gap:10px;max-width:500px">
+<input type="text" id="name" placeholder="Adınız" required style="padding:10px;border-radius:8px;border:none">
+<input type="text" id="city" placeholder="Şehir" required style="padding:10px;border-radius:8px;border:none">
+<select id="rating" required style="padding:10px;border-radius:8px;border:none">
+<option value="">Puan seçin</option>
+<option value="5">5 Yıldız</option>
+<option value="4">4 Yıldız</option>
+<option value="3">3 Yıldız</option>
+<option value="2">2 Yıldız</option>
+<option value="1">1 Yıldız</option>
+</select>
+<textarea id="comment" placeholder="Yorumunuz" required style="padding:10px;border-radius:8px;border:none"></textarea>
+<button type="submit">Yorum Gönder</button>
+</form>
+</section>
+
+<section id="iletisim">
+<h2>İletişim</h2>
+<p><strong>Hünkâr Bingöl</strong></p>
+<p>Telefon: 0541 966 87 04</p>
+<p>Adres: Ankara / Mamak</p>
+<p>Instagram: <a href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank" style="color:#0ea5e9">@ankaratrenddusakabinbanyo</a></p>
+
+<h3 style="margin-top:30px">Instagram'dan Örnek Çalışmalar</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:10px">
+<img src="banyodolap.jpeg" alt="Banyo dolabı" style="width:100%;border-radius:10px;object-fit:cover;aspect-ratio:1/1">
+<img src="duşakabin3.jpeg" alt="Duşakabin uygulaması" style="width:100%;border-radius:10px;object-fit:cover;aspect-ratio:1/1">
+<img src="duşakabin4.jpeg" alt="Modern duşakabin" style="width:100%;border-radius:10px;object-fit:cover;aspect-ratio:1/1">
+</div>
+</section>
+
+<footer>
+<p>© 2026 Ankara Trend Duşakabin & Banyo</p>
+</footer>
+
+<a class="call" href="tel:+905419668704">📞 Ara</a>
+<a class="instagramBtn" href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank">📸</a>
+<a class="whatsapp" href="https://wa.me/905419668704">WhatsApp</a>
+
+<script>
+let slideIndex = 0;
+let slides = [];
+
+function showSlide(index){
+  slides.forEach(s=>s.style.display="none");
+  if(slides[index]) slides[index].style.display="block";
+}
+
+function nextSlide(){
+  slideIndex=(slideIndex+1)%slides.length;
+  showSlide(slideIndex);
+}
+
+function prevSlide(){
+  slideIndex=(slideIndex-1+slides.length)%slides.length;
+  showSlide(slideIndex);
+}
+
+function autoSlide(){nextSlide()}
+
+// --- Yorum sistemi ---
+const badWords=["salak","aptal","küfür"];
+
+function starText(num){return "⭐".repeat(num)}
+
+function saveReviews(reviews){
+ localStorage.setItem("siteReviews",JSON.stringify(reviews))
+}
+
+function loadReviews(){
+ const data=localStorage.getItem("siteReviews");
+ if(data) return JSON.parse(data);
+
+ // Varsayılan yorumlar
+ return [
+  {name:"Ahmet Y.",city:"Ankara",rating:5,comment:"İşçilik gerçekten mükemmel, çok memnun kaldım."},
+  {name:"Mehmet K.",city:"Mamak",rating:5,comment:"Duşakabin çok kaliteli oldu, tavsiye ederim."},
+  {name:"Fatma D.",city:"Sincan",rating:4,comment:"Fiyat uygun, iş güzel."},
+  {name:"Ali Ç.",city:"Keçiören",rating:5,comment:"Hızlı ve temiz çalıştılar."},
+  {name:"Hasan T.",city:"Yenimahalle",rating:4,comment:"Memnun kaldım, tekrar çalışırım."},
+  {name:"Zeynep A.",city:"Etimesgut",rating:5,comment:"Gerçekten profesyonel ekip."},
+  {name:"Emre S.",city:"Çankaya",rating:4,comment:"Küçük gecikme oldu ama sonuç çok iyi."}
+ ];
+}
+
+function calculateAverage(reviews){
+ if(reviews.length===0) return 0;
+ const sum=reviews.reduce((a,b)=>a+b.rating,0);
+ return (sum/reviews.length).toFixed(1);
+}
+
+function renderReviews(){
+ const list=document.getElementById("reviewsList");
+ list.innerHTML="";
+ const reviews=loadReviews();
+
+ reviews.forEach(r=>{
+  const div=document.createElement("div");
+  div.className="review";
+  div.innerHTML=`<strong>${r.name} (${r.city})</strong><br>${starText(r.rating)}<br>${r.comment}`;
+  list.appendChild(div);
+ });
+
+ document.getElementById("avgRating").innerText=calculateAverage(reviews);
+}
+
+function containsSpam(text){
+ const lower=text.toLowerCase();
+ return badWords.some(w=>lower.includes(w));
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+ slides=Array.from(document.getElementsByClassName("slide"));
+ document.getElementById("nextBtn").addEventListener("click",nextSlide);
+ document.getElementById("prevBtn").addEventListener("click",prevSlide);
+
+ if(slides.length){
+  showSlide(slideIndex);
+  setInterval(autoSlide,4000);
+ }
+
+ renderReviews();
+
+ const form=document.getElementById("reviewForm");
+
+ form.addEventListener("submit",e=>{
+  e.preventDefault();
+
+  const name=document.getElementById("name").value;
+  const city=document.getElementById("city").value;
+  const rating=parseInt(document.getElementById("rating").value);
+  const comment=document.getElementById("comment").value;
+
+  if(containsSpam(comment)){
+   alert("Uygunsuz kelime tespit edildi.");
+   return;
+  }
+
+  const reviews=loadReviews();
+
+  reviews.unshift({name,city,rating,comment});
+
+  saveReviews(reviews);
+
+  renderReviews();
+
+  form.reset();
+ });
+});
+</script>
+</body>
+</html>
