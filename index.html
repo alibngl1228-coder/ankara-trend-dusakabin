@@ -470,15 +470,19 @@ function loadReviews(){
  ];
 }
 
+function generateId(){
+ return Date.now().toString() + Math.random().toString(36).substring(2,9);
+}
+
 function calculateAverage(reviews){
  if(reviews.length===0) return 0;
  const sum=reviews.reduce((a,b)=>a+b.rating,0);
  return (sum/reviews.length).toFixed(1);
 }
 
-function deleteReview(index){
+function deleteReview(id){
  let reviews = loadReviews();
- reviews.splice(index,1);
+ reviews = reviews.filter(r => r.id !== id);
  saveReviews(reviews);
  renderReviews();
 }
@@ -488,16 +492,18 @@ function renderReviews(){
  list.innerHTML="";
  const reviews=loadReviews();
 
- reviews.forEach((r,index)=>{
+ reviews.forEach((r)=>{
   const div=document.createElement("div");
   div.className="review";
+
+  const isMine = r.mine === true;
+
   div.innerHTML=`
     <strong>${r.name} (${r.city}${r.district ? " / " + r.district : ""})</strong><br>
     ${starText(r.rating)}<br>
     <small style="color:#c9b26b">${r.date || "Yeni müşteri"}</small><br>
     ${r.comment}
-    <br>
-    <button class="deleteBtn" onclick="deleteReview(${index})">🗑 Yorumu Sil</button>
+    ${isMine ? `<br><button class="deleteBtn" onclick="deleteReview('${r.id}')">🗑 Yorumu Sil</button>` : ""}
   `;
   list.appendChild(div);
  });
@@ -541,8 +547,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   const reviews=loadReviews();
   const today = new Date().toLocaleDateString("tr-TR", {year:"numeric", month:"long"});
+  const id = generateId();
 
-  reviews.unshift({name,city,district,rating,comment,date:today});
+  reviews.unshift({id,name,city,district,rating,comment,date:today,mine:true});
 
   saveReviews(reviews);
   renderReviews();
