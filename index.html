@@ -161,6 +161,21 @@ button:hover{
   box-shadow:0 0 12px rgba(212,175,55,0.15);
 }
 
+.deleteBtn{
+  margin-top:12px;
+  background:#8b0000;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.deleteBtn:hover{
+  background:#b30000;
+}
+
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -206,6 +221,9 @@ button:hover{
   text-decoration:none;
   font-weight:bold;
   box-shadow:0 0 15px rgba(0,0,0,0.3);
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
 .whatsapp:hover,
@@ -262,7 +280,7 @@ textarea::placeholder{
 <h2>Ankara'da Profesyonel Duşakabin ve Banyo Çözümleri</h2>
 <p>Kaliteli işçilik • Uygun fiyat • Hızlı montaj • Garantili hizmet</p>
 
-<a href="tel:+905419668704"><button>📞 Hemen Ara</button></a>
+<a href="tel:+905419668704"><button>📲 Hemen Ara</button></a>
 <a href="https://wa.me/905419668704?text=Merhaba%20du%C5%9Fakabin%20i%C3%A7in%20fiyat%20teklifi%20almak%20istiyorum" target="_blank">
   <button style="margin-left:10px;">💰 Fiyat Teklifi Al</button>
 </a>
@@ -383,7 +401,10 @@ textarea::placeholder{
 <p>© 2026 Ankara Trend Duşakabin & Banyo</p>
 </footer>
 
-<a class="call" href="tel:+905419668704">📞 Ara</a>
+<a class="call" href="tel:+905419668704">
+  <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Ara" style="width:18px;height:18px;">
+  Ara
+</a>
 
 <a class="instagramBtn" href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:22px;height:22px;">
@@ -435,7 +456,6 @@ function loadReviews(){
   {name:"Hasan T.",city:"Ankara",district:"Yenimahalle",rating:4,date:"Ocak 2026",comment:"Memnun kaldım, tekrar çalışırım."},
   {name:"Zeynep A.",city:"Ankara",district:"Çankaya",rating:5,date:"Ocak 2026",comment:"Gerçekten profesyonel ekip."},
   {name:"Emre S.",city:"Ankara",district:"Mamak",rating:4,date:"Ocak 2026",comment:"Küçük gecikme oldu ama sonuç çok iyi."},
-
   {name:"Mustafa A.",city:"Ankara",district:"Altındağ",rating:5,date:"Mart 2026",comment:"Hem hızlı geldiler hem de çok temiz iş çıkardılar."},
   {name:"Burak T.",city:"Ankara",district:"Pursaklar",rating:5,date:"Mart 2026",comment:"Duşakabin montajı sorunsuz yapıldı, elinize sağlık."},
   {name:"Elif K.",city:"Ankara",district:"Gölbaşı",rating:4,date:"Şubat 2026",comment:"İlgili ve düzgün çalışan bir ekip, memnun kaldık."},
@@ -456,15 +476,29 @@ function calculateAverage(reviews){
  return (sum/reviews.length).toFixed(1);
 }
 
+function deleteReview(index){
+ let reviews = loadReviews();
+ reviews.splice(index,1);
+ saveReviews(reviews);
+ renderReviews();
+}
+
 function renderReviews(){
  const list=document.getElementById("reviewsList");
  list.innerHTML="";
  const reviews=loadReviews();
 
- reviews.forEach(r=>{
+ reviews.forEach((r,index)=>{
   const div=document.createElement("div");
   div.className="review";
-  div.innerHTML=`<strong>${r.name} (${r.city}${r.district ? " / " + r.district : ""})</strong><br>${starText(r.rating)}<br><small style="color:#c9b26b">${r.date || "Yeni müşteri"}</small><br>${r.comment}`;
+  div.innerHTML=`
+    <strong>${r.name} (${r.city}${r.district ? " / " + r.district : ""})</strong><br>
+    ${starText(r.rating)}<br>
+    <small style="color:#c9b26b">${r.date || "Yeni müşteri"}</small><br>
+    ${r.comment}
+    <br>
+    <button class="deleteBtn" onclick="deleteReview(${index})">🗑 Yorumu Sil</button>
+  `;
   list.appendChild(div);
  });
 
