@@ -5,12 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="QZgggXkcOwZc6Suc2OccuEyiwxYYjmDberVI_NJZ0-c" />
 <title>Ankara Trend Duşakabin & Banyo</title>
+
+<meta name="description" content="Ankara Trend Duşakabin & Banyo. Duşakabin montajı, banyo dolabı, su tesisatı ve arıza tamiri hizmetleri. Ankara ve çevresinde profesyonel çözümler.">
+<meta name="keywords" content="Ankara duşakabin, duşakabin montajı, banyo dolabı, su tesisatı, Ankara banyo yenileme">
+<meta name="author" content="Ankara Trend Duşakabin & Banyo">
+
 <style>
 body{
   font-family:Arial;
   margin:0;
   background:#0b0b0b;
   color:#f5e6b3;
+  scroll-behavior:smooth;
 }
 
 header{
@@ -18,6 +24,9 @@ header{
   padding:20px;
   text-align:center;
   border-bottom:2px solid #d4af37;
+  position:sticky;
+  top:0;
+  z-index:999;
 }
 
 nav a{
@@ -33,7 +42,7 @@ nav a:hover{
 }
 
 .hero{
-  padding:80px 20px;
+  padding:90px 20px;
   text-align:center;
   background:linear-gradient(135deg,#0b0b0b,#1a1a1a,#d4af37);
   color:white;
@@ -42,11 +51,13 @@ nav a:hover{
 .hero h2{
   font-size:36px;
   color:#fff4c2;
+  margin-bottom:10px;
 }
 
 .hero p{
   color:#f3d97a;
   font-size:18px;
+  margin-bottom:25px;
 }
 
 section{
@@ -77,6 +88,8 @@ h1,h2,h3{
   width:100%;
   border-radius:10px;
   margin-bottom:10px;
+  object-fit:cover;
+  aspect-ratio:4/3;
 }
 
 footer{
@@ -151,14 +164,14 @@ button:hover{
   box-shadow:0 0 12px rgba(212,175,55,0.15);
 }
 
-  .whatsapp{
+.whatsapp{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
   color:white;
   padding:14px 18px;
-  border-radius:50px;f
+  border-radius:50px;
   text-decoration:none;
   font-weight:bold;
   box-shadow:0 0 15px rgba(0,0,0,0.3);
@@ -174,11 +187,15 @@ button:hover{
   right:20px;
   background:#E1306C;
   color:white;
-  padding:14px 18px;
-  border-radius:50px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
   text-decoration:none;
   font-weight:bold;
   box-shadow:0 0 15px rgba(0,0,0,0.3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .call{
@@ -219,14 +236,24 @@ input::placeholder,
 textarea::placeholder{
   color:#c9b26b;
 }
+
+@media (max-width:768px){
+  .hero h2{font-size:28px;}
+  nav a{display:inline-block;margin:6px;}
+  .call,.whatsapp,.instagramBtn{right:12px;}
+}
 </style>
 </head>
 <body>
+
 <header>
-<h1>Ankara Trend Duşakabin & Banyo</h1>
+<h1 style="font-size:38px;letter-spacing:1px;">Ankara Trend Duşakabin & Banyo</h1>
+<p style="margin-top:8px;color:#c9b26b;">Duşakabin • Banyo Dolabı • Su Tesisatı</p>
 <nav>
 <a href="#">Ana Sayfa</a>
+<a href="#hakkimizda">Hakkımızda</a>
 <a href="#hizmet">Hizmetler</a>
+<a href="#nedenbiz">Neden Biz?</a>
 <a href="#galeri">Galeri</a>
 <a href="#yorum">Yorumlar</a>
 <a href="#iletisim">İletişim</a>
@@ -235,32 +262,69 @@ textarea::placeholder{
 </header>
 
 <div class="hero">
-<h2>Profesyonel Duşakabin ve Su Tesisatı Hizmetleri</h2>
-<p>Modern çözümler • Kaliteli malzeme • Uygun fiyat</p>
-<a href="tel:+905419668704"><button>Hemen Ara</button></a>
+<h2>Ankara'da Profesyonel Duşakabin ve Banyo Çözümleri</h2>
+<p>Kaliteli işçilik • Uygun fiyat • Hızlı montaj • Garantili hizmet</p>
+
+<a href="tel:+905419668704"><button>📞 Hemen Ara</button></a>
+<a href="https://wa.me/905419668704?text=Merhaba%20du%C5%9Fakabin%20i%C3%A7in%20fiyat%20teklifi%20almak%20istiyorum" target="_blank">
+  <button style="margin-left:10px;">💰 Fiyat Teklifi Al</button>
+</a>
 </div>
+
+<section id="hakkimizda">
+  <h2>Hakkımızda</h2>
+  <p>
+    Ankara Trend Duşakabin & Banyo olarak Ankara ve çevresinde duşakabin montajı,
+    banyo dolabı uygulamaları, su tesisatı ve arıza tamiri hizmetleri sunuyoruz.
+    Kaliteli işçilik, uygun fiyat ve müşteri memnuniyetini ön planda tutuyoruz.
+  </p>
+</section>
 
 <section id="hizmet">
 <h2>Hizmetlerimiz</h2>
 <div class="services">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101" alt="Duşakabin montajı">
+<img src="duşakabin1.jpeg" alt="Duşakabin montajı">
 <h3>Duşakabin Montajı</h3>
 <p>Her banyoya uygun modern duşakabin çözümleri.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1" alt="Banyo tesisatı">
+<img src="duşakabin4.jpeg" alt="Banyo tesisatı">
 <h3>Su Tesisatı</h3>
 <p>Banyo, lavabo ve su hattı için profesyonel tesisat hizmeti.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1600566752227-8f2c7a4fbd44" alt="Banyo tamiri">
+<img src="duşakabin3.jpeg" alt="Arıza tamiri ve bakım hizmeti">
 <h3>Arıza Tamiri</h3>
 <p>Su kaçağı, klozet, lavabo ve duş alanı arızalarına hızlı müdahale.</p>
 </div>
+
+<div class="card">
+<img src="banyodolap.jpeg" alt="Banyo dolabı montajı">
+<h3>Banyo Dolabı</h3>
+<p>Şık ve kullanışlı banyo dolabı çözümleri, montaj ve yenileme hizmeti.</p>
 </div>
+</div>
+</section>
+
+<section id="nedenbiz">
+  <h2>Neden Bizi Seçmelisiniz?</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Kaliteli İşçilik</h3>
+      <p>Her projede temiz, sağlam ve uzun ömürlü uygulama.</p>
+    </div>
+    <div class="card">
+      <h3>Uygun Fiyat</h3>
+      <p>Bütçenize uygun kaliteli duşakabin ve banyo çözümleri.</p>
+    </div>
+    <div class="card">
+      <h3>Hızlı Hizmet</h3>
+      <p>Ankara ve çevresinde hızlı keşif, montaj ve destek.</p>
+    </div>
+  </div>
 </section>
 
 <section id="galeri">
@@ -287,9 +351,10 @@ textarea::placeholder{
 
 <h3 style="margin-top:40px">Yorum Bırak</h3>
 <form id="reviewForm" style="display:grid;gap:10px;max-width:500px">
-<input type="text" id="name" placeholder="Adınız" required style="padding:10px;border-radius:8px;border:none">
-<input type="text" id="city" placeholder="Şehir" required style="padding:10px;border-radius:8px;border:none">
-<select id="rating" required style="padding:10px;border-radius:8px;border:none">
+<input type="text" id="name" placeholder="Adınız" required>
+<input type="text" id="city" placeholder="Şehir" required>
+<input type="text" id="district" placeholder="İlçe" required>
+<select id="rating" required>
 <option value="">Puan seçin</option>
 <option value="5">5 Yıldız</option>
 <option value="4">4 Yıldız</option>
@@ -297,7 +362,7 @@ textarea::placeholder{
 <option value="2">2 Yıldız</option>
 <option value="1">1 Yıldız</option>
 </select>
-<textarea id="comment" placeholder="Yorumunuz" required style="padding:10px;border-radius:8px;border:none"></textarea>
+<textarea id="comment" placeholder="Yorumunuz" required></textarea>
 <button type="submit">Yorum Gönder</button>
 </form>
 </section>
@@ -307,7 +372,7 @@ textarea::placeholder{
 <p><strong>Hünkâr Bingöl</strong></p>
 <p>Telefon: 0541 966 87 04</p>
 <p>Adres: Ankara / Mamak</p>
-<p>Instagram: <a href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank" style="color:#0ea5e9">@ankaratrenddusakabinbanyo</a></p>
+<p>Instagram: <a href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank" style="color:#d4af37">@ankaratrenddusakabinbanyo</a></p>
 
 <h3 style="margin-top:30px">Instagram'dan Örnek Çalışmalar</h3>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:10px">
@@ -322,13 +387,15 @@ textarea::placeholder{
 </footer>
 
 <a class="call" href="tel:+905419668704">📞 Ara</a>
+
 <a class="instagramBtn" href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:22px;height:22px;">
 </a>
+
 <a class="whatsapp" href="https://wa.me/905419668704?text=Merhaba%20du%C5%9Fakabin%20fiyat%C4%B1%20almak%20istiyorum" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width:20px;height:20px;">
   WhatsApp
-</a>💬 WhatsApp</a>
+</a>
 
 <script>
 let slideIndex = 0;
@@ -351,7 +418,6 @@ function prevSlide(){
 
 function autoSlide(){nextSlide()}
 
-// --- Yorum sistemi ---
 const badWords=["salak","aptal","küfür"];
 
 function starText(num){return "⭐".repeat(num)}
@@ -364,15 +430,26 @@ function loadReviews(){
  const data=localStorage.getItem("siteReviews");
  if(data) return JSON.parse(data);
 
- // Varsayılan yorumlar
  return [
-  {name:"Ahmet Y.",city:"Ankara",rating:5,comment:"İşçilik gerçekten mükemmel, çok memnun kaldım."},
-  {name:"Mehmet K.",city:"Mamak",rating:5,comment:"Duşakabin çok kaliteli oldu, tavsiye ederim."},
-  {name:"Fatma D.",city:"Sincan",rating:4,comment:"Fiyat uygun, iş güzel."},
-  {name:"Ali Ç.",city:"Keçiören",rating:5,comment:"Hızlı ve temiz çalıştılar."},
-  {name:"Hasan T.",city:"Yenimahalle",rating:4,comment:"Memnun kaldım, tekrar çalışırım."},
-  {name:"Zeynep A.",city:"Etimesgut",rating:5,comment:"Gerçekten profesyonel ekip."},
-  {name:"Emre S.",city:"Çankaya",rating:4,comment:"Küçük gecikme oldu ama sonuç çok iyi."}
+  {name:"Ahmet Y.",city:"Ankara",district:"Mamak",rating:5,date:"Mart 2026",comment:"İşçilik gerçekten mükemmel, çok memnun kaldım."},
+  {name:"Mehmet K.",city:"Ankara",district:"Sincan",rating:5,date:"Mart 2026",comment:"Duşakabin çok kaliteli oldu, tavsiye ederim."},
+  {name:"Fatma D.",city:"Ankara",district:"Keçiören",rating:4,date:"Şubat 2026",comment:"Fiyat uygun, iş güzel."},
+  {name:"Ali Ç.",city:"Ankara",district:"Etimesgut",rating:5,date:"Şubat 2026",comment:"Hızlı ve temiz çalıştılar."},
+  {name:"Hasan T.",city:"Ankara",district:"Yenimahalle",rating:4,date:"Ocak 2026",comment:"Memnun kaldım, tekrar çalışırım."},
+  {name:"Zeynep A.",city:"Ankara",district:"Çankaya",rating:5,date:"Ocak 2026",comment:"Gerçekten profesyonel ekip."},
+  {name:"Emre S.",city:"Ankara",district:"Mamak",rating:4,date:"Ocak 2026",comment:"Küçük gecikme oldu ama sonuç çok iyi."},
+
+  {name:"Mustafa A.",city:"Ankara",district:"Altındağ",rating:5,date:"Mart 2026",comment:"Hem hızlı geldiler hem de çok temiz iş çıkardılar."},
+  {name:"Burak T.",city:"Ankara",district:"Pursaklar",rating:5,date:"Mart 2026",comment:"Duşakabin montajı sorunsuz yapıldı, elinize sağlık."},
+  {name:"Elif K.",city:"Ankara",district:"Gölbaşı",rating:4,date:"Şubat 2026",comment:"İlgili ve düzgün çalışan bir ekip, memnun kaldık."},
+  {name:"Merve S.",city:"Ankara",district:"Polatlı",rating:5,date:"Şubat 2026",comment:"Banyo dolabı ve duşakabin çok şık oldu."},
+  {name:"Onur D.",city:"Ankara",district:"Mamak",rating:5,date:"Şubat 2026",comment:"Söz verdikleri saatte geldiler, gayet profesyoneller."},
+  {name:"Seda Y.",city:"Ankara",district:"Çankaya",rating:4,date:"Şubat 2026",comment:"Fiyat performans olarak çok iyi bir hizmet aldık."},
+  {name:"Yusuf B.",city:"Ankara",district:"Keçiören",rating:5,date:"Ocak 2026",comment:"Duşakabin camı ve montaj kalitesi gerçekten çok iyi."},
+  {name:"Hakan E.",city:"Ankara",district:"Etimesgut",rating:5,date:"Ocak 2026",comment:"İşçilik sağlam, iletişimleri de çok iyiydi."},
+  {name:"Tuğba N.",city:"Ankara",district:"Sincan",rating:4,date:"Ocak 2026",comment:"Beklediğimizden daha güzel bir sonuç çıktı."},
+  {name:"Serkan P.",city:"Ankara",district:"Yenimahalle",rating:5,date:"Ocak 2026",comment:"Lavabo ve duş alanı arızasını kısa sürede çözdüler."},
+  {name:"Ayşe C.",city:"Ankara",district:"Altındağ",rating:5,date:"Aralık 2025",comment:"Güler yüzlü ve işinin ehli bir ekip, tavsiye ederim."}
  ];
 }
 
@@ -390,7 +467,7 @@ function renderReviews(){
  reviews.forEach(r=>{
   const div=document.createElement("div");
   div.className="review";
-  div.innerHTML=`<strong>${r.name} (${r.city})</strong><br>${starText(r.rating)}<br>${r.comment}`;
+  div.innerHTML=`<strong>${r.name} (${r.city}${r.district ? " / " + r.district : ""})</strong><br>${starText(r.rating)}<br><small style="color:#c9b26b">${r.date || "Yeni müşteri"}</small><br>${r.comment}`;
   list.appendChild(div);
  });
 
@@ -422,6 +499,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   const name=document.getElementById("name").value;
   const city=document.getElementById("city").value;
+  const district=document.getElementById("district").value;
   const rating=parseInt(document.getElementById("rating").value);
   const comment=document.getElementById("comment").value;
 
@@ -431,13 +509,12 @@ document.addEventListener("DOMContentLoaded",()=>{
   }
 
   const reviews=loadReviews();
+  const today = new Date().toLocaleDateString("tr-TR", {year:"numeric", month:"long"});
 
-  reviews.unshift({name,city,rating,comment});
+  reviews.unshift({name,city,district,rating,comment,date:today});
 
   saveReviews(reviews);
-
   renderReviews();
-
   form.reset();
  });
 });
