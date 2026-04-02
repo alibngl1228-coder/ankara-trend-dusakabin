@@ -6,30 +6,219 @@
 <meta name="google-site-verification" content="QZgggXkcOwZc6Suc2OccuEyiwxYYjmDberVI_NJZ0-c" />
 <title>Ankara Trend Duşakabin & Banyo</title>
 <style>
-body{font-family:Arial;margin:0;background:#0f172a;color:white}
-header{background:#020617;padding:20px;text-align:center}
-nav a{color:white;margin:0 10px;text-decoration:none}
-.hero{padding:80px 20px;text-align:center;background:linear-gradient(120deg,#0ea5e9,#1e293b)}
-section{padding:60px 20px;max-width:1100px;margin:auto}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#1e293b;padding:20px;border-radius:12px}
-.card img{width:100%;border-radius:10px;margin-bottom:10px}
-footer{background:#020617;text-align:center;padding:20px;margin-top:40px}
-button{background:#0ea5e9;border:none;padding:12px 20px;border-radius:8px;color:white;cursor:pointer}
+body{
+  font-family:Arial;
+  margin:0;
+  background:#0b0b0b;
+  color:#f5e6b3;
+}
 
-.slider{position:relative;max-width:900px;margin:auto;display:flex;align-items:center;justify-content:center}
-.slides{overflow:hidden;width:100%}
-.slide{width:100%;display:none;border-radius:12px}
-.prev,.next{background:#0ea5e9;border:none;color:white;font-size:24px;padding:10px 16px;border-radius:8px;cursor:pointer;margin:10px}
+header{
+  background:#111111;
+  padding:20px;
+  text-align:center;
+  border-bottom:2px solid #d4af37;
+}
 
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.review{background:#1e293b;padding:20px;border-radius:12px}
+nav a{
+  color:#f5e6b3;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
-.instagramBtn{position:fixed;bottom:140px;right:20px;background:#E1306C;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
-.call{position:fixed;bottom:80px;right:20px;background:#0ea5e9;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
+nav a:hover{
+  color:#d4af37;
+  transition:0.3s;
+}
 
-.ratingBox{margin-bottom:20px;font-size:20px}
+.hero{
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#0b0b0b,#1a1a1a,#d4af37);
+  color:white;
+}
+
+.hero h2{
+  font-size:36px;
+  color:#fff4c2;
+}
+
+.hero p{
+  color:#f3d97a;
+  font-size:18px;
+}
+
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h1,h2,h3{
+  color:#d4af37;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#161616;
+  padding:20px;
+  border-radius:14px;
+  border:1px solid #d4af37;
+  box-shadow:0 0 15px rgba(212,175,55,0.15);
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+footer{
+  background:#111111;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+  border-top:2px solid #d4af37;
+  color:#f5e6b3;
+}
+
+button{
+  background:#d4af37;
+  border:none;
+  padding:12px 20px;
+  border-radius:8px;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#f1c94a;
+  transform:scale(1.05);
+}
+
+.slider{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slides{
+  overflow:hidden;
+  width:100%;
+}
+
+.slide{
+  width:100%;
+  display:none;
+  border-radius:12px;
+  border:2px solid #d4af37;
+}
+
+.prev,.next{
+  background:#d4af37;
+  border:none;
+  color:black;
+  font-size:24px;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  margin:10px;
+  font-weight:bold;
+}
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.review{
+  background:#161616;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #d4af37;
+  box-shadow:0 0 12px rgba(212,175,55,0.15);
+}
+
+  .whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;f
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:16px;
+}
+
+.instagramBtn{
+  position:fixed;
+  bottom:140px;
+  right:20px;
+  background:#E1306C;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+.call{
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  background:#d4af37;
+  color:black;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp:hover,
+.instagramBtn:hover,
+.call:hover{
+  transform:scale(1.08);
+  transition:0.3s;
+}
+
+.ratingBox{
+  margin-bottom:20px;
+  font-size:20px;
+  color:#f3d97a;
+}
+
+input, textarea, select{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #d4af37;
+  background:#111111;
+  color:#f5e6b3;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#c9b26b;
+}
 </style>
 </head>
 <body>
@@ -133,8 +322,13 @@ button{background:#0ea5e9;border:none;padding:12px 20px;border-radius:8px;color:
 </footer>
 
 <a class="call" href="tel:+905419668704">📞 Ara</a>
-<a class="instagramBtn" href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank">📸</a>
-<a class="whatsapp" href="https://wa.me/905419668704">WhatsApp</a>
+<a class="instagramBtn" href="https://instagram.com/ankaratrenddusakabinbanyo" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:22px;height:22px;">
+</a>
+<a class="whatsapp" href="https://wa.me/905419668704?text=Merhaba%20du%C5%9Fakabin%20fiyat%C4%B1%20almak%20istiyorum" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width:20px;height:20px;">
+  WhatsApp
+</a>💬 WhatsApp</a>
 
 <script>
 let slideIndex = 0;
